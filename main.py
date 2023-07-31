@@ -29,11 +29,12 @@ async def on_ready():
 
 @bot.tree.command(name="help", description="Learn more about the bot")
 async def help(interaction: Interaction):
-    embed = Embed(color=discord.Color.red(), title="This is a title")
+    embed = Embed(color=discord.Color.white(), title="Learn more about AstroBot")
     embed.set_author(name='HELP')
-    embed.add_field(name='schedule/unschedule', value='Posts a random APOD from anytime between present and 1996', inline=False)
-    embed.add_field(name='apod', value="Posts NASA's Astronomy Picture of the Day", inline=False)
-    embed.add_field(name='iotd', value="Posts AstroBin's Image of the Day", inline=False)
+    embed.add_field(name='schedule/unschedule', value='Initiate or cancel automated daily posts for text channels', inline=False)
+    embed.add_field(name='apod', value="Get NASA's Astronomy Picture of the Day", inline=False)
+    embed.add_field(name='iotd', value="Get AstroBin's Image of the Day", inline=False)
+    embed.add_field(name='toppick', value="Get a randomized selection from AstroBin's Top Picks", inline=False)
     embed.set_footer(text='Created by Max M')
     await interaction.response.send_message(embed=embed)
 
