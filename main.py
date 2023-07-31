@@ -11,8 +11,8 @@ from functions import random_date, get_apod, add_channel, del_inactive, get_chan
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents, activity=discord.Activity(type=discord.ActivityType.watching, name='the stars'))
 bot.remove_command('help')
-guild = discord.Object(id=750811257032147225)
-post_time = datetime.time(hour=7, minute = 25) #UTC TIME
+#guild = discord.Object(id=)
+post_time = datetime.time(hour=2, minute=0 ) #UTC TIME, 8am MST
 
 #----------------------------------------------------------------------------------------------------------------------#
 #BOT COMMANDS
@@ -20,8 +20,8 @@ post_time = datetime.time(hour=7, minute = 25) #UTC TIME
 
 @bot.event
 async def on_ready():
-    bot.tree.clear_commands(guild=guild)
-    synced = await bot.tree.sync()  #take guild=guild out if any errors occur
+    bot.tree.clear_commands()
+    synced = await bot.tree.sync()  #use guild=guild parameter to reset
     print("Synced " + str(len(synced)) + " commands\nBot ready")
     send_daily.start()
 
