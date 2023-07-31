@@ -6,7 +6,7 @@
 ![AstroBin Image of the Day](https://ibb.co/8Ndqmm4)
 
 
-
+AstroBot was created using the Discord.py library as well as SQLite3 for keeping record of the channels requesting automated daily uploads for NASA's APOD and/or AstroBin's IOTD.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTIzOTQ4MjgsMTQ5Nzc0NzMzMV19
+eyJoaXN0b3J5IjpbMTI4MzQyOTE1NSwxNDk3NzQ3MzMxXX0=
 -->
